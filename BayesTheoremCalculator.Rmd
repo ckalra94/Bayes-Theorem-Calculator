@@ -1,0 +1,30 @@
+---
+title: "BayesTheoremCalculator"
+author: "Chris Kalra"
+date: "2/15/2019"
+output: html_document
+---
+
+# Bayes Theorem Fundamental Calculator
+
+```{r}
+
+#P(Pos | Dis) * P(Dis)
+#------------------------------------------------------
+#[P(Pos | Dis) * P(Dis)] + [P(Pos | NoDis) * P(NoDis)]
+
+# Sensitivity * Prevalence
+#------------------------------------------------------
+# [Sensitivity * Prevalence] + [(1-Specificity)* (1-Prevalence)]
+
+#p1
+#------------------------------------------------------
+#p1 + p2
+
+sensitivity =   .90        # 0 < x < 1
+specificity =   .90     # 0 < x < 1
+prevalence =    .01       # 0 < x < 1
+p1 = sensitivity * prevalence
+p2 = ((1-specificity)*(1-prevalence))
+Bayes = p1/(p1+p2) ; Bayes
+```
